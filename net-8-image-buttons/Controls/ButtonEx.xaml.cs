@@ -2,7 +2,7 @@ using Microsoft.Maui.Controls;
 
 namespace net_8_image_buttons.Controls;
 
-public partial class ButtonEx : Grid
+public partial class ButtonEx : Frame
 {
 	public ButtonEx()
 	{
@@ -29,15 +29,6 @@ public partial class ButtonEx : Grid
     {
         get => (Color)GetValue(TextColorProperty);
         set => SetValue(TextColorProperty, value);
-    }
-
-    public static readonly BindableProperty BorderColorProperty =
-        BindableProperty.Create(nameof(BorderColor), typeof(Color), typeof(ButtonEx), default(Color));
-
-    public Color BorderColor
-    {
-        get => (Color)GetValue(BorderColorProperty);
-        set => SetValue(BorderColorProperty, value);
     }
 
     public static readonly BindableProperty BorderWidthProperty =
